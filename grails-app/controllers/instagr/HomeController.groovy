@@ -4,8 +4,12 @@ class HomeController {
     def instagramService
 
     def index() {
-        instagramService.pullData("urbanart")
-        [photos:Photo.list(max:45, order: 'desc', sort:'id')]
+        def model = [photos:Photo.list(max:45, order: 'desc', sort:'id', offset: params.int('offset')), total: Photo.count()]
+        if(request.xhr){
+            render(template:'list', model: model)
+        }else{
+            return model
+        }
     }
     
     def show() {

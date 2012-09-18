@@ -4,10 +4,10 @@
 </head>
 
 <body>
-	<g:each var="photo" in="${photos}">
-	<span>
-		<g:link action="show" id="${photo.id}"><img src="${photo.thumb}"/></g:link>
-	</span>
-	</g:each>
+	<div id="content">
+	<g:render template="list"/>
+	</div>
+	<br/>
+	<strong>${total} photos</strong>
 </body>
 </html>

@@ -18,6 +18,7 @@
 		<div class="header"><g:link action="index"><h1>VandalArt.org</h1></g:link></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo">A little experiment using <a href="http://instagr.am/developer/" target="blank">Instagram API</a>, by <a href="http://www.danilat.com" target="blank">Dani Latorre</a> (<a href="http://twitter.com/dani_latorre/" target="blank">@dani_latorre</a>).</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<g:javascript library="application"/>
         <r:layoutResources />
 		<ga:trackPageview />

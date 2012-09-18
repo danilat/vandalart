@@ -44,6 +44,7 @@ grails.project.dependency.resolution = {
         
         compile ":cloud-bees:0.5.4"
         compile ":google-analytics:1.0"
+        compile ":quartz:1.0-RC2"
         //compile ":redis-gorm:1.0.0.M8"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
