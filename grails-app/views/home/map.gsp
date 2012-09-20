@@ -18,10 +18,9 @@
 				L.tileLayer('http://{s}.tile.cloudmade.com/bf2a4748b587427ca820e0b52152d3ca/1/256/{z}/{x}/{y}.png', {
 				    attribution: ''
 				}).addTo(map);
-				L.Popup.maxWidth=500;
 				<g:each var="photo" in="${photos}">
 					var marker = L.marker([${photo.latitude}, ${photo.longitude}]).addTo(map);
-					marker.bindPopup('<g:link action="show" id="${photo.id}"><img src="${photo.thumb}"/></g:link>');
+					marker.bindPopup('<g:link action="show" id="${photo.id}"><img src="${photo.thumb}"/></g:link>', {minWidth:310});
 					
 				</g:each>
 			</script>
