@@ -10,6 +10,12 @@
 		<title><g:layoutTitle default="Home"/> | VandalArt.org</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+	 	<!--[if lte IE 8]>
+	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	 	<![endif]-->
+	 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
+		<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
@@ -17,9 +23,13 @@
 	</head>
 	<body>
 		<div class="header"><g:link action="index"><h1>VandalArt.org</h1></g:link></div>
-		<g:layoutBody/>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<div id="content">
+			<g:layoutBody/>
+		</div>
 		<div class="footer" role="contentinfo">A little experiment using <a href="http://instagr.am/developer/" target="blank">Instagram API</a>, by <a href="http://www.danilat.com" target="blank">Dani Latorre</a> (<a href="http://twitter.com/dani_latorre/" target="blank">@dani_latorre</a>).</div>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 		<g:javascript library="application"/>
         <r:layoutResources />
 		<ga:trackPageview />

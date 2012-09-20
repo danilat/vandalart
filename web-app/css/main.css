@@ -71,13 +71,14 @@ a:link, a:visited, a:hover {
 a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
 }
-
+.header a{text-decoration: none}
 h1 {
     color: #000;
 	font-weight: bold;
 	font-size: 5.25em;
 	font-family: 'Dancing Script', cursive; 
-	margin: 0.8em 0 0.3em 0;
+	margin: 0.8em 0 0.3em 0.8em;
+	padding-top: 20px;
 }
 
 ul {
@@ -95,7 +96,8 @@ img {
 	margin: 1em;
 }
 
-.content {
+#content {
+	text-align: center;
 }
 
 .content h1 {
@@ -595,4 +597,6 @@ a.skip {
 	left: -9999px;
 }
 
-#more{font-size:40px; text-decoration: underline;color: #48802c; font-family: 'Dancing Script', cursive; }
+#more{font-size:40px; text-decoration: none;color: #48802c; font-family: 'Dancing Script', cursive; }
+
+#dialog{text-align: center;}
