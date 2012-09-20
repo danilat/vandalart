@@ -20,6 +20,11 @@ class HomeController {
             redirect action:'index'
         }
     }
+
+    def map(){
+        def photos = Photo.findAllByLatitudeIsNotNullAndLongitudeIsNotNull(max:50, order: 'desc', sort:'id')
+        return [photos: photos]
+    }
 }
 
 /*
