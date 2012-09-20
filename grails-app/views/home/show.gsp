@@ -30,6 +30,7 @@
 				}else{
 					$("#map").hide();
 				}
+				social();
 			});
 			</script>
 			<br/>
