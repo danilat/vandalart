@@ -1,11 +1,12 @@
 package instagr
 
 import groovy.json.JsonSlurper
+import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 
 class InstagramService {
 
     def pullData(tag){
-        def clientId = "f5388b6c7b7140adb6f1893af465237f"
+        def clientId = CH.config.instagram.clientId
         def url = "https://api.instagram.com/v1/tags/${tag}/media/recent?client_id=${clientId}"
         def data = new URL(url).getText()
         def slurper = new JsonSlurper()
