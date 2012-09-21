@@ -55,7 +55,3 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
     }
 }
-
-cloudbees.account = 'danilat'
-cloudbees.api.key = '1D8FA6DC40454E7D'
-cloudbees.api.secret = 'ERFQAAHZUYXKFIDPOMAF0K5ETMP0MNVKBTJDNOGUWZC='

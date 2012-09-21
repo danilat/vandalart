@@ -1,6 +1,9 @@
 /* Styles for mobile devices */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
+	h1 {
+		font-size: 3.25em;
+	}
 	.nav {
 		padding: 0.5em;
 	}
