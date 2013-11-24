@@ -14,7 +14,7 @@ class InstagramService {
         def importedData = result.data.reverse()
         importedData.each{
             def photo = Photo.findByInstagramId(it.id)
-            if(!photo){
+            if(!photo && it.tags.size < 10){
                 def description = it.caption?.text?.replaceAll("[^\\d\\sa-zA-Z]", "")
                 photo = new Photo(
                         instagramId: it.id,
@@ -32,8 +32,8 @@ class InstagramService {
                     photo.latitude = it.location.latitude
                     photo.longitude = it.location.longitude
                 }
+                photo.save()
             }
-            photo.save()
         }
         
         println Photo.count()
