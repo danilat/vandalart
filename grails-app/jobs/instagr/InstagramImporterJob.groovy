@@ -10,9 +10,7 @@ class InstagramImporterJob {
 
     def execute() {
         instagramService.pullData("vandalart")
-        instagramService.pullData("urbanart")
-        instagramService.pullData("arteurbano")
-        instagramService.pullData("streetart")
+        instagramService.pullData("graffiti")
         println "imported"
     }
 }
